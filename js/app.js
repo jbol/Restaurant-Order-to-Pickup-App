@@ -1,12 +1,24 @@
 (function(){
   
-  /* Create a module */
+  /* Module */
   var app = angular.module('cafeteria', []);
   
-  /* Create a controller */
+  /* Menu Controller */
   app.controller('MenuController', function(){
-  	/* Set controller product property to gem */
+
   	this.menu = menuitems;
+  });
+
+  /* Ordering Controller */
+  app.controller('OrderController', function(){
+    
+    this.order = {};
+
+    this.addToOrder = function(product){
+      product.order.push(this.product);
+
+    };
+    
   });
 
   var menuitems = [
