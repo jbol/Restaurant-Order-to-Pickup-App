@@ -117,7 +117,8 @@
 						      <div class="caption">
 						        <h3>{{item.name}}</h3>
 						        <p>{{item.description}}</p>
-						        <h4>{{item.price | currency}}</h4><a href="#" class="btn btn-default" role="button">Purchase</a></p>
+						        <h4>{{item.price | currency}}</h4>
+                                <a class="btn btn-default" role="button" ng-controller="OrderController as order" ng-submit="order.addToOrder(item)">Purchase</a>
 						        
 						      </div>
 						    </div>
@@ -130,6 +131,12 @@
     </div><!-- /.row -->
 
     <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
 <!-- Bottom Nav -->
@@ -144,6 +151,7 @@
                 </span>
             </div>
         </div>
+       <p ng-model="order.item.name">Your order of {{order.item.name}} will be ready at</p>
 
 	  	<button type="button" class="btn btn-default navbar-btn navbar-right">Cancel Order</button></p>
 	  

@@ -12,10 +12,10 @@
   /* Ordering Controller */
   app.controller('OrderController', function(){
     
-    this.order = {};
+    this.order = [];
 
-    this.addToOrder = function(product){
-      product.order.push(this.product);
+    this.addToOrder = function(item){
+      product.order.push(this.item);
 
     };
     
